@@ -86,7 +86,7 @@ const Login = () => {
                   </Link>
                 </p>
               </div>
-              <p className="small text-muted mt-3 alert alert-info">
+              <p className="small mt-3 alert alert-info">
                 <strong>Note:</strong> Users can register and log in using their
                 own credentials. Admin access is restricted to the fixed
                 credentials below.
