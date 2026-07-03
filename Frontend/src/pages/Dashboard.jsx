@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import API from "../api/axios";
 import Sidebar from "../components/Sidebar";
+import '../../src/App.css'
 
 const Dashboard = () => {
   const [analytics, setAnalytics] = useState({
@@ -32,9 +33,9 @@ const Dashboard = () => {
     <div className="d-flex">
       <Sidebar />
 
-      <div className="container mt-4">
+      <div className="dashboard container">
         <div className="d-flex align-items-center gap-2">
-          <h2>
+          <h2 className="mt-4">
             Welcome{" "}
             <span
               className={
@@ -54,7 +55,7 @@ const Dashboard = () => {
         </div>
 
         {user?.role === "Admin" && (
-          <div className="row mt-4 g-3">
+          <div className="row mt-4 mb-4 g-3">
             <div className="col-12 col-sm-6 col-md-3">
               <div className="card p-3 h-100 text-center">
                 <h6>Total Users</h6>

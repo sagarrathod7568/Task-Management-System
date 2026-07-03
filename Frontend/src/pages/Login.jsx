@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import API from "../api/axios";
 import { AuthContext } from "../context/AuthContext";
+import '../App.css'
 
 const Login = () => {
   const navigate = useNavigate();
@@ -32,12 +33,12 @@ const Login = () => {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container my-5">
       <div className="row justify-content-center">
         {/* Responsive constraints: full width on mobile, half on tablets, 1/3 on large screens */}
         <div className="col-12 col-sm-8 col-md-6 col-lg-4">
           <div className="card shadow-sm rounded-4">
-            <div className="card-body p-4">
+            <div className="card-body login p-4">
               <h2 className="text-center mb-4">Login</h2>
 
               <form onSubmit={handleSubmit}>

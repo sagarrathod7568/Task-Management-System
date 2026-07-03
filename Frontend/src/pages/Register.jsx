@@ -31,12 +31,12 @@ const Register = () => {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container my-5">
       <div className="row justify-content-center">
         {/* Update these column classes to match your Login component exactly */}
         <div className="col-12 col-sm-8 col-md-6 col-lg-4">
           <div className="card shadow-sm rounded-4">
-            <div className="card-body p-4">
+            <div className="card-body register p-4">
               <h2 className="text-center mb-4">Register</h2>
 
               <form onSubmit={handleSubmit}>

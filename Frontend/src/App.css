@@ -1,3 +1,101 @@
+.sidebar {
+  width: 275px;
+  min-height: 100vh;
+  padding: 20px;
+  transition: all 0.3s ease;
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.482)
+    ),
+    url("/login_background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.dashboard {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  .alert{
+    background-color: white;
+  }
+}
+
+.dashboard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.689),
+      rgba(255, 255, 255, 0.285)
+    ),
+    url("/task_manager_background.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  z-index: -1;
+}
+
+/* Logo */
+.sidebar-logo {
+  width: 180px;
+  margin: 0 auto;
+}
+
+/* Text beside icons */
+.sidebar-text {
+  display: inline;
+}
+
+.login, .register{
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    url("/login_background.jpg");
+  background-size: cover;
+  background-position: right;
+  border-radius: 1rem;
+
+  .alert-info{
+    background-color: #f9fdff;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 70px;
+    padding: 15px 8px;
+    align-items: center;
+  }
+
+  .sidebar-logo {
+    width: 50px;
+    margin: 10px 0 10px 0;
+  }
+
+  .sidebar-text,
+  .text-muted,
+  hr {
+    display: none;
+  }
+
+  .sidebar .btn {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+  }
+}
+
 .swal2-shown,
 .swal2-height-auto {
   padding-right: unset !important;

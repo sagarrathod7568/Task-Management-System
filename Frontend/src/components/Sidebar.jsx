@@ -36,16 +36,9 @@ const Sidebar = () => {
 
   return (
     <div
-      className="d-flex flex-column bg-light border-end shadow-sm"
-      style={{
-        width: "275px",
-        minHeight: "100vh",
-        padding: "20px",
-      }}
+      className="sidebar d-flex flex-column bg-light border-end shadow-sm"
     >
-      {/* Header */}
-      <h3 className="fw-bold text-primary ">Task Manager</h3>
-
+      <img className="sidebar-logo" src="/task_manager_logo.png" alt="Logo" />
       <hr />
 
       {/* Links */}
@@ -56,7 +49,9 @@ const Sidebar = () => {
             isActive("/") ? "btn-primary text-white" : "btn-outline-primary"
           }`}
         >
-          📊 Dashboard
+          <>
+            📊 <span className="sidebar-text">Dashboard</span>
+          </>
         </Link>
 
         <Link
@@ -67,7 +62,10 @@ const Sidebar = () => {
               : "btn-outline-primary"
           }`}
         >
-          {user?.role === "User" ? "📌 My Tasks" : "📌 All Tasks"}
+          📌{" "}
+          <span className="sidebar-text">
+            {user?.role === "User" ? "My Tasks" : "All Tasks"}
+          </span>
         </Link>
 
         {user?.role === "Admin" && (
@@ -84,7 +82,7 @@ const Sidebar = () => {
                   : "btn-outline-danger"
               }`}
             >
-              👤 User Management
+              👤 <span className="sidebar-text">User Management</span>
             </Link>
 
             <Link
@@ -95,7 +93,7 @@ const Sidebar = () => {
                   : "btn-outline-danger"
               }`}
             >
-              📋 Task Monitoring
+              📋 <span className="sidebar-text">Task Monitoring</span>
             </Link>
 
             <Link
@@ -106,7 +104,7 @@ const Sidebar = () => {
                   : "btn-outline-danger"
               }`}
             >
-              📜 Activity Logs
+              📜 <span className="sidebar-text">Activity Logs</span>
             </Link>
           </>
         )}
@@ -115,7 +113,7 @@ const Sidebar = () => {
       {/* Logout */}
       <div className=" pt-5 mt-5">
         <button className="btn btn-dark w-100" onClick={logout}>
-          🚪 Logout
+          🚪 <span className="sidebar-text">Logout</span>
         </button>
       </div>
     </div>
