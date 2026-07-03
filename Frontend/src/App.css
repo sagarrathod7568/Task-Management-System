@@ -4,10 +4,7 @@
   padding: 20px;
   transition: all 0.3s ease;
   background:
-    linear-gradient(
-      rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 0.482)
-    ),
+    linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.482)),
     url("/login_background.jpg");
   background-size: cover;
   background-position: center;
@@ -17,7 +14,7 @@
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  .alert{
+  .alert {
     background-color: white;
   }
 }
@@ -27,10 +24,8 @@
   position: absolute;
   inset: 0;
 
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.689),
-      rgba(255, 255, 255, 0.285)
-    ),
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.689), rgba(255, 255, 255, 0.285)),
     url("/task_manager_background.png");
 
   background-size: cover;
@@ -51,18 +46,16 @@
   display: inline;
 }
 
-.login, .register{
+.login,
+.register {
   background:
-    linear-gradient(
-      rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 0)
-    ),
+    linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
     url("/login_background.jpg");
   background-size: cover;
   background-position: right;
   border-radius: 1rem;
 
-  .alert-info{
+  .alert-info {
     background-color: #f9fdff;
   }
 }
@@ -81,8 +74,7 @@
   }
 
   .sidebar-text,
-  .text-muted,
-  hr {
+  .text-muted {
     display: none;
   }
 
